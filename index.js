@@ -1,6 +1,11 @@
-let myDate = new Date();
+document.addEventListener("load", myTimer);
 
 
-setInterval(()=>{
-    document.getElementById('time').innerHTML = myDate;
-}, 1000);
+
+
+setInterval(myTimer, 1000);
+
+function myTimer(){
+    let myDate = new Date();
+    document.getElementById('time').innerHTML = myDate.toLocaleString();
+}
